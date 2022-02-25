@@ -1,0 +1,45 @@
+POST http://localhost:3000/equipment-sets
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "items": [
+    {
+      "id": 2,
+      "slot": "2h"
+    },
+    {
+      "id": 4151,
+      "slot": "2h"
+    }
+  ]
+}
+
+###Update EquipmentSet
+PATCH http://localhost:3000/equipment-sets/1
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 2,
+      "slot": "legs"
+    },
+    {
+      "id": 3,
+      "slot": "chest"
+    },
+    {
+      "id": 4,
+      "slot": "head"
+    },
+    {
+      "id": 5,
+      "slot": "bracers"
+    },
+    {
+      "id": 4151,
+      "slot": "2h"
+    }
+  ]
+}
