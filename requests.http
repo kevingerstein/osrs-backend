@@ -43,3 +43,14 @@ Content-Type: application/json
     }
   ]
 }
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "display_name": "kevin bcrypt",
+  "email": "kevin@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
