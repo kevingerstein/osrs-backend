@@ -67,3 +67,22 @@ Content-Type: application/json
   "email": "kevin@test.com",
   "password": "password"
 }
+
+### Equipment-sets create
+POST {{ domain }}/equipment-sets
+Authorization: Bearer {{ jwt }}
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "items": [
+    {
+      "id": 2,
+      "slot": "2h"
+    },
+    {
+      "id": 4151,
+      "slot": "2h"
+    }
+  ]
+}

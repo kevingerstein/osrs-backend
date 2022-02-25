@@ -1,4 +1,6 @@
 class EquipmentSetsController < ApplicationController
+  before_action :authenticate_user
+
   def index
     render json: EquipmentSet.all
   end
