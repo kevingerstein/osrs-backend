@@ -1,4 +1,8 @@
-POST http://localhost:3000/equipment-sets
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDU4OTk5NTd9.P6G20JbdVAOssxzhdrvU3MEntdP0tK6wMh67r1i8vks
+
+@domain = http://localhost:3000
+
+POST {{ domain }}/equipment-sets
 Content-Type: application/json
 
 {
@@ -16,7 +20,7 @@ Content-Type: application/json
 }
 
 ###Update EquipmentSet
-PATCH http://localhost:3000/equipment-sets/1
+PATCH {{ domain }}/equipment-sets/1
 Content-Type: application/json
 
 {
@@ -45,7 +49,7 @@ Content-Type: application/json
 }
 
 ### Users create (signup)
-POST http://localhost:3000/users
+POST {{ domain }}/users
 Content-Type: application/json
 
 {
@@ -53,4 +57,13 @@ Content-Type: application/json
   "email": "kevin@test.com",
   "password": "password",
   "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST {{ domain }}/sessions
+Content-Type: application/json
+
+{
+  "email": "kevin@test.com",
+  "password": "password"
 }
